@@ -8,13 +8,19 @@
 
 import UIKit
 
-class HistoryTableViewController: UITableViewController {
+protocol HistoryTableViewControllerDelegate {
+    func entriesPresent(entries: Conversion)
+}
 
+class HistoryTableViewController: UITableViewController {
+    
+    var entries : [Conversion]?
+    var delegate: HistoryTableViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+//         self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -24,23 +30,32 @@ class HistoryTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if let entries = self.entries{
+            return entries.count
+        } else{
         return 0
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
 
         // Configure the cell...
+        if let entries = self.entries?[indexPath.row]{
+            let formatter = DateFormatter()
+            cell.textLabel?.text = String(entries.fromVal) + " " + entries.fromUnits + " = " + String(entries.toVal) + " " + entries.toUnits
+            cell.detailTextLabel?.text = formatter.string(from: entries.timestamp)
+        }
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

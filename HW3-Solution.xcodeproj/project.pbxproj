@@ -16,6 +16,12 @@
 		9E1E65672142BF8900F4E8CB /* HW3_SolutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E65662142BF8900F4E8CB /* HW3_SolutionUITests.swift */; };
 		9E1E65752142C38700F4E8CB /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E65742142C38700F4E8CB /* DecimalMinusTextField.swift */; };
 		9E1E65772142C53800F4E8CB /* UnitsAndModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E65762142C53800F4E8CB /* UnitsAndModes.swift */; };
+		9E1E65792147122200F4E8CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E65782147122200F4E8CB /* SettingsViewController.swift */; };
+		9EE845AC215BE1590091EFE4 /* ConversionCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE845AB215BE1590091EFE4 /* ConversionCalcTextField.swift */; };
+		9EE845AE215BE2820091EFE4 /* ConversionCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE845AD215BE2820091EFE4 /* ConversionCalcLabel.swift */; };
+		9EE845B0215BE2AD0091EFE4 /* ConversionCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE845AF215BE2AD0091EFE4 /* ConversionCalcButton.swift */; };
+		DF7319C5218777A300BFB79D /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7319C4218777A300BFB79D /* Conversion.swift */; };
+		DF7319C721877E6100BFB79D /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7319C621877E6100BFB79D /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		9E1E65682142BF8900F4E8CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1E65742142C38700F4E8CB /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		9E1E65762142C53800F4E8CB /* UnitsAndModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsAndModes.swift; sourceTree = "<group>"; };
+		9E1E65782147122200F4E8CB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9EE845AB215BE1590091EFE4 /* ConversionCalcTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcTextField.swift; sourceTree = "<group>"; };
+		9EE845AD215BE2820091EFE4 /* ConversionCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcLabel.swift; sourceTree = "<group>"; };
+		9EE845AF215BE2AD0091EFE4 /* ConversionCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCalcButton.swift; sourceTree = "<group>"; };
+		DF7319C4218777A300BFB79D /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		DF7319C621877E6100BFB79D /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,12 @@
 				9E1E654F2142BF8900F4E8CB /* LaunchScreen.storyboard */,
 				9E1E65522142BF8900F4E8CB /* Info.plist */,
 				9E1E65762142C53800F4E8CB /* UnitsAndModes.swift */,
+				9E1E65782147122200F4E8CB /* SettingsViewController.swift */,
+				9EE845AB215BE1590091EFE4 /* ConversionCalcTextField.swift */,
+				9EE845AD215BE2820091EFE4 /* ConversionCalcLabel.swift */,
+				9EE845AF215BE2AD0091EFE4 /* ConversionCalcButton.swift */,
+				DF7319C4218777A300BFB79D /* Conversion.swift */,
+				DF7319C621877E6100BFB79D /* HistoryTableViewController.swift */,
 			);
 			path = "HW3-Solution";
 			sourceTree = "<group>";
@@ -262,9 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE845AC215BE1590091EFE4 /* ConversionCalcTextField.swift in Sources */,
 				9E1E65772142C53800F4E8CB /* UnitsAndModes.swift in Sources */,
+				9EE845B0215BE2AD0091EFE4 /* ConversionCalcButton.swift in Sources */,
+				DF7319C5218777A300BFB79D /* Conversion.swift in Sources */,
+				DF7319C721877E6100BFB79D /* HistoryTableViewController.swift in Sources */,
 				9E1E65752142C38700F4E8CB /* DecimalMinusTextField.swift in Sources */,
+				9EE845AE215BE2820091EFE4 /* ConversionCalcLabel.swift in Sources */,
 				9E1E65492142BF8800F4E8CB /* ViewController.swift in Sources */,
+				9E1E65792147122200F4E8CB /* SettingsViewController.swift in Sources */,
 				9E1E65472142BF8800F4E8CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +332,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		9E1E654F2142BF8900F4E8CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
