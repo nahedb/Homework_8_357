@@ -14,7 +14,7 @@ protocol HistoryTableViewControllerDelegate {
 
 class HistoryTableViewController: UITableViewController {
     
-    var entries : [Conversion]?
+    var entries : [Conversion]? = []
     var delegate: HistoryTableViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -41,6 +41,15 @@ class HistoryTableViewController: UITableViewController {
         return 0
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let d = self.delegate {
+            d.entriesPresent(entries: (entries?[indexPath.row])!)
+        }
+        // this pops back to the main calculator
+        _ = self.navigationController?.popViewController(animated: true)
+
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,9 +57,8 @@ class HistoryTableViewController: UITableViewController {
 
         // Configure the cell...
         if let entries = self.entries?[indexPath.row]{
-            let formatter = DateFormatter()
-            cell.textLabel?.text = String(entries.fromVal) + " " + entries.fromUnits + " = " + String(entries.toVal) + " " + entries.toUnits
-            cell.detailTextLabel?.text = formatter.string(from: entries.timestamp)
+            cell.textLabel?.text = "\(entries.fromVal) \(entries.fromUnits) =  \(entries.toVal) \(entries.toUnits)"
+            cell.detailTextLabel?.text = "\(entries.timestamp)"
         }
 
         return cell
