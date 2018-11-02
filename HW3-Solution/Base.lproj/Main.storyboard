@@ -279,6 +279,58 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FancyCell" rowHeight="80" id="3XM-Tt-Udm" customClass="HistoryTableViewCell" customModule="HW3_Solution" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3XM-Tt-Udm" id="rxr-KS-cEF">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TqY-ck-Muc" userLabel="cell_image">
+                                            <rect key="frame" x="8" y="8.5" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="8aN-NB-S4g"/>
+                                                <constraint firstAttribute="width" constant="60" id="mOs-8z-u0s"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Conversion Infomation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-6j-4tv" userLabel="top_text">
+                                            <rect key="frame" x="76" y="8.5" width="257" height="29"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="goR-hl-yLA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="timeStamp" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="vc7-ff-Vpt" userLabel="bottom_text">
+                                            <rect key="frame" x="76" y="45.5" width="257" height="29"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="Rgl-sj-Gkg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vc7-ff-Vpt" firstAttribute="leading" secondItem="TqY-ck-Muc" secondAttribute="trailing" constant="8" id="0so-nD-m0t"/>
+                                        <constraint firstItem="NHt-6j-4tv" firstAttribute="leading" secondItem="TqY-ck-Muc" secondAttribute="trailing" constant="8" id="6GP-Zn-hKl"/>
+                                        <constraint firstAttribute="trailing" secondItem="vc7-ff-Vpt" secondAttribute="trailing" constant="8" id="ArI-18-aMg"/>
+                                        <constraint firstAttribute="bottom" secondItem="TqY-ck-Muc" secondAttribute="bottom" constant="8" id="GV7-yy-xsv"/>
+                                        <constraint firstAttribute="bottom" secondItem="vc7-ff-Vpt" secondAttribute="bottom" constant="8" id="HJV-Kb-qyA"/>
+                                        <constraint firstItem="NHt-6j-4tv" firstAttribute="top" secondItem="rxr-KS-cEF" secondAttribute="top" constant="8" id="PWo-0C-Tbb"/>
+                                        <constraint firstAttribute="trailing" secondItem="NHt-6j-4tv" secondAttribute="trailing" constant="8" id="QLP-fI-WE1"/>
+                                        <constraint firstItem="vc7-ff-Vpt" firstAttribute="top" secondItem="NHt-6j-4tv" secondAttribute="bottom" constant="8" id="S97-0r-OF2"/>
+                                        <constraint firstItem="TqY-ck-Muc" firstAttribute="leading" secondItem="rxr-KS-cEF" secondAttribute="leading" constant="8" id="b48-5T-3Zm"/>
+                                        <constraint firstItem="TqY-ck-Muc" firstAttribute="top" secondItem="rxr-KS-cEF" secondAttribute="top" constant="8" id="k23-pT-HUp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conversionLabel" destination="NHt-6j-4tv" id="nEe-B3-zRA"/>
+                                    <outlet property="thumbNail" destination="TqY-ck-Muc" id="av5-5h-wn5"/>
+                                    <outlet property="timestampLabel" destination="vc7-ff-Vpt" id="RgA-pY-uvt"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="DCf-5a-K9a" id="tdL-wL-0Mc"/>
@@ -288,7 +340,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOt-CD-X4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="426" y="867"/>
+            <point key="canvasLocation" x="424.80000000000001" y="866.71664167916049"/>
         </scene>
     </scenes>
 </document>
